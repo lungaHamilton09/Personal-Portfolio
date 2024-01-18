@@ -1,51 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunga Momoza - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Lunga Momoza</h1>
-        <p>Musician | Entrepreneur | Technological Innovator</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      /* Add your styles here if needed */
+      .form-group {
+          max-width: 400px;
+          margin: 0 auto;
+      }
+      label {
+          display: block;
+          margin-bottom: 10px;
+      }
+      input,
+      textarea {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+      }
+      button {
+          padding: 10px;
+          background-color: #4caf50;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+  </style>
+  </head>
+  <body>
+    <style>
+      /* Add your CSS styling for the buttons here */
+      .btn-container {
+          text-align: center;
+      }
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#entrepreneurship">Entrepreneurship</a></li>
-            <li><a href="#innovation">Technological Innovation</a></li>
+      .btn-container button {
+          margin: 5px; /* Adjust the margin as needed for spacing between buttons */
+      }
+  </style>
+    <nav id="desktop-nav">
+      <div class="logo">Lunga Momoza</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
     </nav>
-
+    <nav id="hamburger-nav">
+      <div class="logo">Lunga Momoza</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="image/IMG_1691 (2) (1).jpg" alt="Lunga Momoza profile picture"class="rounded-circle"  />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Lunga Momoza</h1>
+        <p class="section__text__p2">Software Developer Intern</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="image/linkedin-icon-logo-png-transparent.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/lunga-hamilton-momoza-94bb181a7/'"
+          />
+          <img
+            src="image/GitHub-Logo.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/lungaHamilton09/Personal-Portfolio'"
+          />
+        </div>
+      </div>
+    </section>
     <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio website. I am Lunga Momoza, a passionate musician, dedicated entrepreneur, and enthusiastic technological innovator. I believe in the power of creativity and innovation to make a positive impact on the world.</p>
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="image/IMG_7093 (1).jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="image/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p> 6+ months <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="image/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As a highly motivated and dynamic software developer, 
+              I am deeply committed to crafting high-end technological solutions and innovative software. 
+              My passion lies in creating user-interactive applications that significantly elevate customer experiences. 
+              Eager to contribute to the rapid growth of the technological landscape, 
+              I aspire to be an integral part of teams driving innovation and excellence in the field.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="image/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
-    <section id="music">
-        <h2>Music</h2>
-        <p>Music is my passion. I have been creating and performing music for many years. Explore my musical journey and listen to my latest tracks.</p>
-        <!-- You can embed music players or links to your music here. -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="image/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="image/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
-
-    <section id="entrepreneurship">
-        <h2>Entrepreneurship</h2>
-        <p>As an entrepreneur, I have founded and been involved in several successful ventures. Learn more about my entrepreneurial endeavors and the projects I'm currently working on.</p>
-        <!-- You can describe your entrepreneurial projects and link to relevant websites or resources here. -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="image/Banking app.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Banking App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/lungaHamilton09/Personal-Portfolio'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/bngcwayi/Banking_App.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="image/Doctor icon.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Healthcare Website</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/lungaHamilton09/Personal-Portfolio'"
+              >
+                Github
+            </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Asekona80/Kuyasa-Health-services.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="image/_7_tetris_4x.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Tetris Game</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/lungaHamilton09/Personal-Portfolio'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Asekona80/Kuyasa-Health-services.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="image/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
-
-    <section id="innovation">
-        <h2>Technological Innovation</h2>
-        <p>I am passionate about using technology to drive innovation. Explore my innovative projects and how I'm using technology to solve real-world problems.</p>
-        <!-- You can describe your technological innovation projects and provide links to relevant information here. -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <form
+          action="https://formspree.io/f/moqgvbbg"
+          method="POST"
+        >
+          <div class="form-group"><label>
+              <h1>Contact Form</h1>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="eg. Hamilton" required>
+              Your email:
+              <input type="email" name="email" required>
+            </label><label>
+              Your message:
+              <textarea name="message" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button></div>
+          
+        </form>
+      </form>
     </section>
-
     <footer>
-        <p>&copy; 2023 Lunga Momoza</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Lunga Hamilton Momoza. All Rights Reserved.</p>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
